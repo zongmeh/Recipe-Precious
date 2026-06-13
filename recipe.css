@@ -1,3 +1,106 @@
-body{background:white;color:#404040;font-size:11pt;font-family:Georgia,Garamond,serif}
-h1,h2{color:#A4A400;background:#F0F0F0;font-family:'Lucida Sans Unicode',Helvetica,Arial,sans-serif;text-decoration:underline}
-a{color:#A4A400}
+:root{
+    --primary:#A4A400;
+    --secondary:#F8E9A1;
+    --dark:#404040;
+}
+
+body{
+    background:
+    url("silverware.jpg");
+    background-attachment:fixed;
+    color:var(--dark);
+    font-family:Georgia,Garamond,serif;
+    margin:0;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    color:var(--primary);
+    background:#F0F0F0;
+    padding:20px;
+    border-radius:15px;
+    text-decoration:underline;
+}
+
+h2{
+    color:var(--primary);
+    text-decoration:underline;
+}
+
+header img{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-top:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.recipe-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    margin-top:40px;
+}
+
+.ingredients,
+.directions{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.ingredients ul{
+    list-style-image:url("pie_bullet.png");
+}
+
+.ingredients li,
+.directions li{
+    margin-bottom:15px;
+}
+
+.reviews{
+    margin-top:50px;
+}
+
+.review{
+    background:#FFFFA8;
+    padding:20px;
+    margin-bottom:20px;
+    border-left:6px solid var(--primary);
+    border-radius:12px;
+    font-style:italic;
+}
+
+.links{
+    margin-top:50px;
+}
+
+.links a{
+    display:block;
+    margin-bottom:15px;
+    color:var(--primary);
+    font-weight:bold;
+}
+
+pre{
+    margin-top:40px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+}
+
+@media(max-width:768px){
+
+.recipe-grid{
+    grid-template-columns:1fr;
+}
+
+}
